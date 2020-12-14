@@ -17,7 +17,7 @@ var jorge = {
     ingeniero: true,
     cocinero: false,
     cantante: false,
-    gay: true,
+    dj: true,
     guitarrista: false,
     drone: false
 
@@ -57,9 +57,6 @@ function imprimirProfesiones(persona){
         console.log('Vuela Drone')
         }
 
-    if (persona.gay){
-        console.log('Es Gay')
-        }
 }
 
 function imprimirSiEsMayorDeEdad(persona){
@@ -76,4 +73,3 @@ imprimirSiEsMayorDeEdad(victor)
 console.log('************************');
 imprimirProfesiones(jorge)
 imprimirSiEsMayorDeEdad(jorge) 
-console.log('A jorge ya se le va');
