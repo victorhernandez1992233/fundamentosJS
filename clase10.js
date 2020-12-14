@@ -13,12 +13,12 @@ var victor = {
 var jorge = {
     nombre: 'jorge',
     apellido: 'Caracum',
-    edad: 18,
+    edad: 20,
     ingeniero: true,
     cocinero: false,
     cantante: false,
     gay: true,
-    guitarrista: true,
+    guitarrista: false,
     drone: false
 
 }
@@ -55,6 +55,10 @@ function imprimirProfesiones(persona){
     }
     if (persona.drone){
         console.log('Vuela Drone')
+        }
+
+    if (persona.gay){
+        console.log('Es Gay')
         }
 }
 
