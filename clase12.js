@@ -1,7 +1,7 @@
 //arrow funtions
 var victor = {
-    nombre: 'victor',
-    apellido: 'hernandez',
+    nombre: 'Victor',
+    apellido: 'Hernandez',
     edad: 29,
     ingeniero: true,
     cocinero: false,
@@ -12,7 +12,7 @@ var victor = {
 
 }
 var jorge = {
-    nombre: 'jorge',
+    nombre: 'Jorge',
     apellido: 'Caracum',
     edad: 20,
     ingeniero: true,
@@ -92,21 +92,18 @@ const MAYORIA_DE_EDAD = 18
 
 var esMayorDeEdad = ({ edad })=> edad >= MAYORIA_DE_EDAD
 
-var imprimirSiEsMayorDeEdad = (persona)=> {
-    console.log(`${persona.nombre} tiene ${persona.edad},`)
-    if (esMayorDeEdad(persona)){
-        console.log(`${persona.nombre} es mayor de edad`)
-    }else{
-        console.log(`te faltan ${18-persona.edad} Años para ser Mayor de Edad`)
-    }
-    
-}
+
+//en este caso se hara uso de nombre del objeto asi que se debe de pasar como parametro
+// al declarar la funcion en este caso queda asi({ edad, nombre })
+
+var imprimirSiEsMayorDeEdad = ({ edad,nombre }) => esMayorDeEdad({ edad })?
+console.log( `${nombre} es mayor de edad`):console.log(`te faltan ${18-edad} Años para ser Mayor de Edad`)
 
 
-var permitirAcceso = ({ edad }) =>  !esMayorDeEdad({edad })? 
-console.log('acceso denegado') : console.log('acceso Autorizado')
+var permitirAcceso = ({ edad }) =>  !esMayorDeEdad({ edad })? 
+console.log('Acceso Denegado') : console.log('Acceso Autorizado')
 
-
+//console.log(`${persona.nombre} tiene ${persona.edad}`)
 
 imprimirProfesiones(victor)
 imprimirSiEsMayorDeEdad(victor)
@@ -116,4 +113,3 @@ imprimirSiEsMayorDeEdad(jorge)
 console.log('************************');
 imprimirProfesiones(edwin)
 imprimirSiEsMayorDeEdad(edwin) 
-
