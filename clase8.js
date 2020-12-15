@@ -1,3 +1,5 @@
+//parametros como referencia o como valor
+
 var victor = {
     nombre: 'victor',
     apellido: 'hernandez',

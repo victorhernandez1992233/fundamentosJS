@@ -1,4 +1,4 @@
-// condicionales
+// funciones que retornan valores
 
 var victor = {
     nombre: 'victor',
@@ -25,6 +25,12 @@ var jorge = {
 
 }
 
+var edwin = {
+    nombre: 'Edwin',
+    apellido: 'Caracum',
+    edad: 16
+
+}
 
 
 function imprimirProfesiones(persona){
@@ -61,12 +67,21 @@ function imprimirProfesiones(persona){
 
 }
 
+
+const MAYORIA_DE_EDAD = 18
+
+
+function esMayorDeEdad (persona){
+    return persona.edad >= MAYORIA_DE_EDAD
+}
+
+
 function imprimirSiEsMayorDeEdad(persona){
     console.log(`${persona.nombre} tiene ${persona.edad},`)
-    if (persona.edad >= 18){
-        console.log('es mayor de edad')
+    if (esMayorDeEdad(persona)){
+        console.log(`${persona.nombre} es mayor de edad`)
     }else{
-        console.log('es Menor de Edad')
+        console.log(`te faltan ${18-persona.edad} Años para ser Mayor de Edad`)
     }
     
 }
@@ -75,3 +90,7 @@ imprimirSiEsMayorDeEdad(victor)
 console.log('************************');
 imprimirProfesiones(jorge)
 imprimirSiEsMayorDeEdad(jorge) 
+console.log('************************');
+imprimirProfesiones(edwin)
+imprimirSiEsMayorDeEdad(edwin) 
+
