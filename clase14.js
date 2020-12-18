@@ -1,6 +1,3 @@
-
-//LOOP FOR
-
 var victor = {
     nombre: 'victor',
     apellido: 'Hernandez',
